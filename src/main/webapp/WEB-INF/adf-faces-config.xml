@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<adf-faces-config xmlns="http://xmlns.oracle.com/adf/view/faces/config">
+	<skin-family>#{prefs.proxy.skinFamily}</skin-family>
+	<client-validation-disabled>false</client-validation-disabled>
+</adf-faces-config>
+-->
+<adf-faces-config
+		xmlns="http://xmlns.oracle.com/adf/view/faces/config">
+	<debug-output>true</debug-output>
+	<accessibility-mode>
+		#{prefs.proxy.accessibilityMode}
+	</accessibility-mode>
+	<look-and-feel>
+		#{prefs.proxy.lookAndFeel}
+	</look-and-feel>
+</adf-faces-config>

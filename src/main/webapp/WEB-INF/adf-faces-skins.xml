@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<skins xmlns="http://xmlns.oracle.com/adf/view/faces/skin">
+	<skin>
+		<id>
+			blue.desktop
+        </id>
+		<family>
+			blue
+        </family>
+		<render-kit-id>
+			oracle.adf.desktop
+        </render-kit-id>
+		<style-sheet-name>
+			skins/cos/cosSkinblue.css
+        </style-sheet-name>
+	</skin>
+	<skin>
+		<id>
+			white.desktop
+        </id>
+		<family>
+			white
+        </family>
+		<render-kit-id>
+			oracle.adf.desktop
+        </render-kit-id>
+		<style-sheet-name>
+			skins/cos/cosSkinwhite.css
+        </style-sheet-name>
+	</skin>
+
+	<skin>
+		<id>
+			grey.desktop
+        </id>
+		<family>
+			grey
+        </family>
+		<render-kit-id>
+			oracle.adf.desktop
+        </render-kit-id>
+		<style-sheet-name>
+			skins/cos/cosSkingrey.css
+        </style-sheet-name>
+	</skin>
+
+
+	<skin>
+		<id>
+			orange.desktop
+        </id>
+		<family>
+			orange
+        </family>
+		<render-kit-id>
+			oracle.adf.desktop
+        </render-kit-id>
+		<style-sheet-name>
+			skins/cos/cosSkinorange.css
+        </style-sheet-name>
+	</skin>
+
+
+
+</skins>

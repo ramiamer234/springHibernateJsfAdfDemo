@@ -2,10 +2,8 @@ package com.dao.impl;
 
 import java.util.List;
 
-import org.hibernate.Query;
-import org.springframework.stereotype.Repository;
-import org.springframework.util.StringUtils;
 import com.dao.BaseDao;
+import org.springframework.util.StringUtils;
 import com.dao.BookDao;
 import com.model.Book;
 
@@ -13,18 +11,17 @@ import com.model.Book;
 public class BookHibernateDao extends BaseDao implements BookDao {
 	public void save(Book book) {
 		// TODO Auto-generated method stub
-		//this.getSession().save(book);
-		//this.getSession().save(book);
+		this.getHibernateTemplate().save(book);
 	}
 
 	public void delete(Book book) {
 		// TODO Auto-generated method stub
-
+		this.getHibernateTemplate().delete(book);
 	}
 
 	public void update(Book book) {
 		// TODO Auto-generated method stub
-
+		this.getHibernateTemplate().update(book);
 	}
 
 	public List<Book> query(String whereSql) {
@@ -34,9 +31,7 @@ public class BookHibernateDao extends BaseDao implements BookDao {
 		if(!StringUtils.isEmpty(whereSql)) {
 			hql.append(whereSql);
 		}
-		/*Query query = this.getSession().createQuery(hql.toString());
-		List<Book> list = query.list();
-		return list;*/
-		return null;
+		List<Book> list = (List<Book>) this.getHibernateTemplate().find(hql.toString());
+		return list;
 	}
 }

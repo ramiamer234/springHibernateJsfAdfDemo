@@ -15,7 +15,7 @@
    		<jsp.version>2.2</jsp.version>
    		<jsf.version>2.2.12</jsf.version>
         <spring.version>4.3.23.RELEASE</spring.version>
-        <hibernate.version>3.6.9.Final</hibernate.version>
+        <hibernate.version>4.3.9.Final</hibernate.version>
         <!-- 注意mysql版本，我的mysql是5.6.36，用5.1.47版本报错 -->
         <!--<mysql.version>5.1.47</mysql.version>-->
         <mysql.version>5.1.9</mysql.version>

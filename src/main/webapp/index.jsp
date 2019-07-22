@@ -10,7 +10,7 @@
 %>
 <f:view>
 	<afh:html>
-	<afh:head title="#{bundle['SalesCommissionManageForm.title']}">
+	<afh:head title="测试">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	</afh:head>
 	<script>

@@ -9,7 +9,7 @@ import com.dao.BaseDao;
 import com.dao.BookDao;
 import com.model.Book;
 
-@Repository
+//@Repository
 public class BookHibernateDao extends BaseDao implements BookDao {
 	public void save(Book book) {
 		// TODO Auto-generated method stub

@@ -2,14 +2,12 @@ package com.dao.impl;
 
 import java.util.List;
 
-import org.hibernate.Query;
-import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
 import com.dao.BaseDao;
 import com.dao.ContactDao;
 import com.model.Contact;
 
-@Repository
+//@Repository
 public class ContactHibernateDao extends BaseDao implements ContactDao {
 	public void save(Contact contact) {
 		//this.getSession().save(contact);
@@ -32,8 +30,7 @@ public class ContactHibernateDao extends BaseDao implements ContactDao {
 		if(!StringUtils.isEmpty(whereSql)) {
 			hql.append(whereSql);
 		}
-		Query query = this.getSession().createQuery(hql.toString());
-		List<Contact> list = query.list();
+		List<Contact> list = (List<Contact>) this.getHibernateTemplate().find(hql.toString());
 		return list;
 	}
 }

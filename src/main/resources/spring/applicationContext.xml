@@ -56,7 +56,7 @@
     </bean>-->
 
     <!-- 定义hibernate的sessionFactory -->
-    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
         <property name="hibernateProperties">
             <props>
@@ -67,9 +67,9 @@
 
                 <!-- 配置二级缓存 -->
                 <!-- hibernate4以前的版本 配置缓存的提供类-->
-                <prop key="hibernate.cache.provider_class">${hibernate.cache.provider_class}</prop>
+                <!--<prop key="hibernate.cache.provider_class">${hibernate.cache.provider_class}</prop>-->
                 <!--hibernate4以后版本二级缓存的提供类-->
-                <!--<prop key="hibernate.cache.region.factory_class">${hibernate.cache.factory_class}</prop>-->
+                <prop key="hibernate.cache.region.factory_class">${hibernate.cache.factory_class}</prop>
                 <!-- 是否启用二级缓存 要启用查询缓存必须设置query.setCacheable(true)-->
                 <prop key="hibernate.cache.use_second_level_cache">true</prop>
                 <!-- 是否启用查询缓存 -->
@@ -88,7 +88,7 @@
     </bean>
 
     <!-- 配置Spring声明式事务 -->
-    <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+    <bean id="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
 
